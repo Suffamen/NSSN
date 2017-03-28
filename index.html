@@ -3,10 +3,10 @@
     <head>
         <title>NSSN</title>
         <meta charset="UTF-8">
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<script src="node_modules/jquery/dist/jquery.min.js"></script>
-		<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 		
         <script src="node_modules/core-js/client/shim.min.js"></script>
         <script src="node_modules/zone.js/dist/zone.js"></script>
@@ -15,20 +15,6 @@
         <script src="systemjs.config.js"></script>
         <script>
           System.import('app').catch(function(err){ console.error(err); });
-        </script>
-
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $('.container').each(function(){
-                    var highestBox = 0;
-                    $('.col-md-4 ', this).each(function(){
-                        if($(this).height() > highestBox) {
-                            highestBox = $(this).height();
-                        }
-                    });
-                    $('.col-md-4 ',this).height(highestBox);
-                });
-            });
         </script>
     </head>
     <body>
