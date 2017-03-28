@@ -44,6 +44,9 @@ var NotesComponent = NotesComponent_1 = (function () {
     };
     NotesComponent.prototype.edit = function () {
     };
+    NotesComponent.prototype.save = function (noteId, text) {
+        this.notesService.save(noteId, text);
+    };
     return NotesComponent;
 }());
 __decorate([

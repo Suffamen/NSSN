@@ -34,4 +34,8 @@ export class NotesService {
         let note: Note = {noteId: NOTES.length+1, noteName: noteName, noteText: ""};
         NOTES.push(note);
     }
+    
+    save(noteId: number, text: string) {
+        NOTES[noteId].noteText = text;
+    }
 }

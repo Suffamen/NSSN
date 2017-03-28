@@ -46,7 +46,6 @@ import { NotesService } from './notes.service';
 	providers: [ NotesComponent ]
 })
 export class NotesComponent {
-        notebook: Notebook;
 	selectedNote: Note = undefined;
 	notes: Note[];
         name: string = "";
@@ -86,4 +85,8 @@ export class NotesComponent {
 	edit(): void {
             
 	}
+        
+        save(noteId: number, text: string) {
+            this.notesService.save(noteId, text);
+        }
 }

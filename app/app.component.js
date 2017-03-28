@@ -22,7 +22,6 @@ var AppComponent = (function () {
         this.notesComponent.uploadNotes(this.selectedNotebook);
         this.textComponent.clean();
         this.selectedNote = undefined;
-        this.notesComponent.notebook = this.selectedNotebook;
     };
     AppComponent.prototype.changedSelectedNote = function (note) {
         this.selectedNote = note;
@@ -33,6 +32,9 @@ var AppComponent = (function () {
     };
     AppComponent.prototype.editedNotebooks = function () {
         this.notebooksComponent.getNotebooks();
+    };
+    AppComponent.prototype.savedNote = function (text) {
+        this.notesComponent.save(this.selectedNote.noteId, text);
     };
     return AppComponent;
 }());
@@ -51,7 +53,7 @@ __decorate([
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-sm-4\">\n\t\t\t\t<notebooks (onChanged)=\"changedSelectedNotebook($event)\"\n                                           (onEdit)=\"editedNotebooks($event)\"></notebooks>\n\t\t\t</div>\n\n\t\t\t<div class=\"col-sm-4\">\n\t\t\t\t<notes (onChangedSelectedNote)=\"changedSelectedNote($event)\"\n                                       (onEdit)=\"editedNotes($event)\"></notes>\n\t\t\t</div>\n\n\t\t\t<div class=\"col-sm-4 highest\">\n\t\t\t\t<text></text>\n\t\t\t</div>\n\t\t</div>\n\t",
+        template: "\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-sm-4\">\n\t\t\t\t<notebooks (onChanged)=\"changedSelectedNotebook($event)\"\n                                           (onEdit)=\"editedNotebooks($event)\"></notebooks>\n\t\t\t</div>\n\n\t\t\t<div class=\"col-sm-4\">\n\t\t\t\t<notes (onChangedSelectedNote)=\"changedSelectedNote($event)\"\n                                       (onEdit)=\"editedNotes($event)\"></notes>\n\t\t\t</div>\n\n\t\t\t<div class=\"col-sm-4 highest\">\n\t\t\t\t<text (onSaved)=\"savedNote($event)\"></text>\n\t\t\t</div>\n\t\t</div>\n\t",
         styleUrls: ['app/equal.css']
     })
 ], AppComponent);

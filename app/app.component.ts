@@ -21,7 +21,7 @@ import { TextComponent } from "./text.component";
 			</div>
 
 			<div class="col-sm-4 highest">
-				<text></text>
+				<text (onSaved)="savedNote($event)"></text>
 			</div>
 		</div>
 	`,
@@ -45,7 +45,6 @@ export class AppComponent {
 	this.notesComponent.uploadNotes(this.selectedNotebook);
 	this.textComponent.clean();
         this.selectedNote = undefined;
-        this.notesComponent.notebook = this.selectedNotebook;
     }
 
     changedSelectedNote(note) {
@@ -59,5 +58,9 @@ export class AppComponent {
     
     editedNotebooks() {
         this.notebooksComponent.getNotebooks();
+    }
+    
+    savedNote(text: string) {
+        this.notesComponent.save(this.selectedNote.noteId, text);
     }
 }
