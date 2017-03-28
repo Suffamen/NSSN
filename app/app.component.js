@@ -34,7 +34,7 @@ var AppComponent = (function () {
         this.notebooksComponent.getNotebooks();
     };
     AppComponent.prototype.savedNote = function (text) {
-        this.notesComponent.save(this.selectedNote.noteId, text);
+        this.notesComponent.save(this.selectedNote.id, text);
     };
     return AppComponent;
 }());

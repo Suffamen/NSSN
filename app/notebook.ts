@@ -1,5 +1,5 @@
 export class Notebook {
-	notebookId: number;
+	id: number;
 	notebookName: string;
 	noteSet: number[];
 }

@@ -1,7 +1,7 @@
 import { Notebook } from './notebook';
 
 export class User {
-    userId: number;
+    id: number;
     username: string;
     password: string;
     notebookSet: Notebook[];

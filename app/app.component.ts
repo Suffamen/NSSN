@@ -61,6 +61,6 @@ export class AppComponent {
     }
     
     savedNote(text: string) {
-        this.notesComponent.save(this.selectedNote.noteId, text);
+        this.notesComponent.save(this.selectedNote.id, text);
     }
 }

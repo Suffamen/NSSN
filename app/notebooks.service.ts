@@ -10,7 +10,7 @@ export class NotebooksService {
 	}
         
     create(notebookName: string) {
-        let notebook: Notebook = {notebookId: NOTEBOOKS.length + 1, notebookName: notebookName, noteSet: []};
+        let notebook: Notebook = {id: NOTEBOOKS.length + 1, notebookName: notebookName, noteSet: []};
         NOTEBOOKS.push(notebook);
     }
 }

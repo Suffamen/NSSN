@@ -16,7 +16,7 @@ var NotesService = (function () {
             var note = NOTES_1[_i];
             for (var _a = 0, _b = notebook.noteSet; _a < _b.length; _a++) {
                 var id = _b[_a];
-                if (note.noteId == id)
+                if (note.id == id)
                     result.push(note);
             }
         }
@@ -29,13 +29,13 @@ var NotesService = (function () {
         var result;
         for (var _i = 0, NOTES_2 = mock_notes_1.NOTES; _i < NOTES_2.length; _i++) {
             var note = NOTES_2[_i];
-            if (note.noteId == id)
+            if (note.id == id)
                 result == mock_notes_1.NOTES.indexOf(note);
         }
         mock_notes_1.NOTES.splice(result, 1);
     };
     NotesService.prototype.create = function (noteName) {
-        var note = { noteId: mock_notes_1.NOTES.length + 1, noteName: noteName, noteText: "" };
+        var note = { id: mock_notes_1.NOTES.length + 1, noteName: noteName, noteText: "" };
         mock_notes_1.NOTES.push(note);
     };
     NotesService.prototype.save = function (noteId, text) {

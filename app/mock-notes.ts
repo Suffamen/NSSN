@@ -1,10 +1,10 @@
 import { Note } from './note';
 
 export const NOTES: Note[] = [
-	{ noteId: 0, noteName: 'First', noteText: 'Hello' },
-	{ noteId: 1, noteName: 'Second', noteText: 'world' },
-	{ noteId: 2, noteName: 'Third', noteText: 'Nice' },
-	{ noteId: 3, noteName: 'Fourth', noteText: 'to' },
-	{ noteId: 4, noteName: 'Fifth', noteText: 'meet' },
-	{ noteId: 5, noteName: 'Sixth', noteText: 'ya' },
+	{ id: 0, noteName: 'First', noteText: 'Hello' },
+	{ id: 1, noteName: 'Second', noteText: 'world' },
+	{ id: 2, noteName: 'Third', noteText: 'Nice' },
+	{ id: 3, noteName: 'Fourth', noteText: 'to' },
+	{ id: 4, noteName: 'Fifth', noteText: 'meet' },
+	{ id: 5, noteName: 'Sixth', noteText: 'ya' },
 ]

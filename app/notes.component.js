@@ -38,7 +38,7 @@ var NotesComponent = NotesComponent_1 = (function () {
     };
     NotesComponent.prototype.deleteNote = function () {
         if (this.selectedNote != undefined) {
-            this.notesService.deleteNote(this.selectedNote.noteId);
+            this.notesService.deleteNote(this.selectedNote.id);
             this.onEdit.emit();
         }
     };

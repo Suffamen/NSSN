@@ -77,7 +77,7 @@ export class NotesComponent {
 	
 	deleteNote(): void {
             if (this.selectedNote != undefined) {
-                this.notesService.deleteNote(this.selectedNote.noteId);
+                this.notesService.deleteNote(this.selectedNote.id);
                 this.onEdit.emit();
             }
 	}
