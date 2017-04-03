@@ -30,9 +30,10 @@ export class NotesService {
         NOTES.splice(result, 1);
     }
     
-    create(noteName: string) {
+    create(noteName: string): number {
         let note: Note = {id: NOTES.length+1, noteName: noteName, noteText: ""};
         NOTES.push(note);
+        return note.id;
     }
     
     save(noteId: number, text: string) {

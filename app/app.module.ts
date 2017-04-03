@@ -12,7 +12,7 @@ import { NotesService } from './notes.service';
 @NgModule({
     imports:      [ 
         BrowserModule, 
-        FormsModule 
+        FormsModule
         ],
     declarations: [ 
         AppComponent, 

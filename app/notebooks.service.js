@@ -5,8 +5,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var core_1 = require("@angular/core");
-var mock_notebooks_1 = require("./mock-notebooks");
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var core_1 = require('@angular/core');
+var mock_notebooks_1 = require('./mock-notebooks');
 var NotebooksService = (function () {
     function NotebooksService() {
     }
@@ -17,10 +20,14 @@ var NotebooksService = (function () {
         var notebook = { id: mock_notebooks_1.NOTEBOOKS.length + 1, notebookName: notebookName, noteSet: [] };
         mock_notebooks_1.NOTEBOOKS.push(notebook);
     };
+    NotebooksService.prototype.addNoteToNotebook = function (noteId, notebookId) {
+        mock_notebooks_1.NOTEBOOKS[notebookId].noteSet.push(noteId);
+    };
+    NotebooksService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [])
+    ], NotebooksService);
     return NotebooksService;
 }());
-NotebooksService = __decorate([
-    core_1.Injectable()
-], NotebooksService);
 exports.NotebooksService = NotebooksService;
 //# sourceMappingURL=notebooks.service.js.map
